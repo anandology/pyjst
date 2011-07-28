@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>pyjst example</title>
+    <script type="text/javascript" src="js/pyjs.js"></script>
+    <script type="text/javascript" src="js/pyjs.webpy.js"></script>
+    <script type="text/javascript" src="js/hello.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var e = document.getElementById("output");
+            var hello = $p.__import__("hello");
+            e.innerHTML = hello.__template__("pyjst");
+        }
+    </script>
+</head>
+<body>
+    <h1>Helloworld with pyjst</h1>
+    <div id="output">
+    </div>
+</body>
